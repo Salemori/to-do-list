@@ -12,7 +12,16 @@
 
     let todoList = [];
 
+   document.getElementById('add-button').onclick =
+
     function addItem () {
+      if(document.getElementById('new-task').value.length !== 0){
+         document.getElementById('incomplete-tasks').innerHTML += `<li>
+                <p>${document.getElementById('new-task').value}</p>
+                <button id="edit-button">Edit</button>
+                <button id="delete-button">Delete</button>
+      </li>`
+      }
     }
     
     function editItem (item) {
