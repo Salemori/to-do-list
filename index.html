@@ -18,10 +18,18 @@
             <form action="">
             <input id="new-task" type="text" placeholder="Add task"/>
             <button id="add-button" type="submit">Add</button>
+           
             </form>
+            <h3>Todo</h3>
+            <ul id="incomplete-tasks">
+                <li>
+                    <input type="checkbox" onclick="taskComplete(this)" class="check">
+                    <input type="text" value="Exercise" class="task" onfocus="getCurrentTask(this)" onblur="editTask(this)">
+                    <i class="fa fa-trash" onclick="removeTask(this)"></i>
+                </li>
+            </ul>
         </div>
-        <h3>Todo</h3>
-        <ul id="incomplete-tasks"></ul>
+       
     </div>
     <script src="index.js"></script>
 
